@@ -1,0 +1,30 @@
+{
+ "model_id": "stgcn_1000",
+ "num_classes": 1000,
+ "class_fingerprint": "72d3ef78291c",
+ "best_epoch": 55,
+ "epochs_ran": 67,
+ "val_top1_best": 0.5844362096347274,
+ "test": {
+  "top1": 0.4880573248407643,
+  "top5": 0.7402866242038216,
+  "macro_precision": 0.5128605051391785,
+  "macro_recall": 0.4881003663003663,
+  "macro_f1": 0.4835688962952304,
+  "weighted_precision": 0.5141446202249843,
+  "weighted_recall": 0.4880573248407643,
+  "weighted_f1": 0.4842053812459153,
+  "n_samples": 12560
+ },
+ "trainable_params": 1341300,
+ "train_minutes": 27.7,
+ "gpu": "Tesla T4",
+ "gpu_test_seconds_total": 5.33,
+ "cpu_latency": {
+  "cpu_threads": 2,
+  "mean_s": 0.010070578300110355,
+  "runs": 10
+ },
+ "smoke_test": false,
+ "total_params": 1370048
+}

@@ -1,0 +1,8 @@
+**Parity of the web-app pipeline with the training cache (30 test videos)**
+
+| Model                       | Agreement (fresh)   | Agreement (shared)   | Repeatable (fresh)   | Repeatable (shared)   | Correct on cache / app (fresh, of 30)   |
+|:----------------------------|:--------------------|:---------------------|:---------------------|:----------------------|:----------------------------------------|
+| Video Swin-T                | 83%                 | 90%                  | 100%                 | 87%                   | 19 / 17                                 |
+| Geometry Transformer (1000) | 87%                 | 83%                  | 100%                 | 87%                   | 19 / 19                                 |
+| ST-GCN                      | 73%                 | 70%                  | 100%                 | 73%                   | 13 / 13                                 |
+| R3D-18 Dual-Stream          | 73%                 | 50%                  | 100%                 | 67%                   | 10 / 9                                  |

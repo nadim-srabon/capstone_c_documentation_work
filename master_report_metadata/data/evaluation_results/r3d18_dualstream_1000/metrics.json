@@ -1,0 +1,29 @@
+{
+ "model_id": "r3d18_dualstream_1000",
+ "num_classes": 1000,
+ "class_fingerprint": "72d3ef78291c",
+ "best_epoch": 40,
+ "val_top1_best": 0.3617864693446089,
+ "selection": "best val_loss (v9 notebook)",
+ "test": {
+  "top1": 0.28152866242038216,
+  "top5": 0.5514331210191082,
+  "macro_precision": 0.31598711904016274,
+  "macro_recall": 0.28414991674991674,
+  "macro_f1": 0.27104138736954037,
+  "weighted_precision": 0.31746940691320835,
+  "weighted_recall": 0.28152866242038216,
+  "weighted_f1": 0.270274905903447,
+  "n_samples": 12560
+ },
+ "trainable_params_during_training": 27007080,
+ "total_params": 35278248,
+ "gpu": "Tesla T4",
+ "gpu_test_seconds_total": 322.1,
+ "cpu_latency": {
+  "cpu_threads": 2,
+  "mean_s": 0.4570859210000435,
+  "runs": 3
+ },
+ "smoke_test": false
+}

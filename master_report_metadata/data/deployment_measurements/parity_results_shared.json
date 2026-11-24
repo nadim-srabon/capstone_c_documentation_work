@@ -1,0 +1,39 @@
+{
+ "mode": "shared",
+ "n_videos": 30,
+ "landmarks_mean_abs_diff": 0.12365100990670423,
+ "landmark_frames_bit_exact_pct": 0.0020833333333333333,
+ "hand_presence_agreement_pct": 1.0,
+ "appearance_mean_abs_pixel_diff": 16.53316669766865,
+ "feature_extraction_s_mean": 1.3620138100057375,
+ "models": {
+  "swin3d_t_1000": {
+   "top1_agreement_cache_vs_app": 0.9,
+   "repeatable_top1_pct": 0.8666666666666667,
+   "correct_on_cached_features": 19,
+   "correct_on_app_features": 17,
+   "mean_abs_prob_diff_of_cached_top1": 0.0734057828783989
+  },
+  "geometry_transformer_1000": {
+   "top1_agreement_cache_vs_app": 0.8333333333333334,
+   "repeatable_top1_pct": 0.8666666666666667,
+   "correct_on_cached_features": 19,
+   "correct_on_app_features": 21,
+   "mean_abs_prob_diff_of_cached_top1": 0.1071010169883569
+  },
+  "stgcn_1000": {
+   "top1_agreement_cache_vs_app": 0.7,
+   "repeatable_top1_pct": 0.7333333333333333,
+   "correct_on_cached_features": 13,
+   "correct_on_app_features": 13,
+   "mean_abs_prob_diff_of_cached_top1": 0.13236787455777327
+  },
+  "r3d18_dualstream_1000": {
+   "top1_agreement_cache_vs_app": 0.5,
+   "repeatable_top1_pct": 0.6666666666666666,
+   "correct_on_cached_features": 10,
+   "correct_on_app_features": 6,
+   "mean_abs_prob_diff_of_cached_top1": 0.1630367584526539
+  }
+ }
+}

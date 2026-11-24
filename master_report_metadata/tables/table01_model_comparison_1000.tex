@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\caption{Test results of the four architectures on 1,000 signs (12,560 test clips)}
+\label{tab:table01_model_comparison_1000}
+\begin{tabular}{llrrrrrrrrrr}
+\toprule
+Model & Input & Params (M) & Val top-1 & Test top-1 & Test top-5 & Macro P & Macro R & Macro F1 & Weighted F1 & Best epoch & CPU latency (ms) \\
+\midrule
+Video Swin-T & RGB video & 28.620000 & 0.746400 & 0.667800 & 0.888900 & 0.694300 & 0.669300 & 0.665100 & 0.664900 & 25 & 1220.000000 \\
+Geometry Transformer & Landmarks & 1.910000 & 0.675200 & 0.574700 & 0.818200 & 0.598200 & 0.574300 & 0.571000 & 0.571600 & 47 & 3.200000 \\
+ST-GCN & Landmarks & 1.370000 & 0.584400 & 0.488100 & 0.740300 & 0.512900 & 0.488100 & 0.483600 & 0.484200 & 55 & 10.100000 \\
+R3D-18 Dual-Stream & RGB + landmarks & 35.280000 & 0.361800 & 0.281500 & 0.551400 & 0.316000 & 0.284100 & 0.271000 & 0.270300 & 40 & 457.100000 \\
+\bottomrule
+\end{tabular}
+\end{table}

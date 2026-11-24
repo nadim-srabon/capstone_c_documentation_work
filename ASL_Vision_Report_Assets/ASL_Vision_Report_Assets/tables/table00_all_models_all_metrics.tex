@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\caption{All metrics of all seven trained models}
+\label{tab:table00_all_models_all_metrics}
+\begin{tabular}{llrrrrrrrrrrr}
+\toprule
+Model & Input & Classes & Params (M) & Val top-1 & Test top-1 & Test top-5 & Macro P & Macro R & Macro F1 & Weighted F1 & Best epoch & CPU latency (ms) \\
+\midrule
+Video Swin-T & RGB video & 1000 & 28.620000 & 0.746400 & 0.667800 & 0.888900 & 0.694300 & 0.669300 & 0.665100 & 0.664900 & 25 & 1220.000000 \\
+Geometry Transformer & Landmarks & 1000 & 1.910000 & 0.675200 & 0.574700 & 0.818200 & 0.598200 & 0.574300 & 0.571000 & 0.571600 & 47 & 3.200000 \\
+ST-GCN & Landmarks & 1000 & 1.370000 & 0.584400 & 0.488100 & 0.740300 & 0.512900 & 0.488100 & 0.483600 & 0.484200 & 55 & 10.100000 \\
+R3D-18 Dual-Stream & RGB + landmarks & 1000 & 35.280000 & 0.361800 & 0.281500 & 0.551400 & 0.316000 & 0.284100 & 0.271000 & 0.270300 & 40 & 457.100000 \\
+Geometry Transformer & Landmarks & 300 & 1.730000 & 0.740200 & 0.631900 & 0.849700 & 0.657500 & 0.632500 & 0.629800 & 0.629900 & 39 & NaN \\
+Geometry Transformer & Landmarks & 500 & 1.780000 & 0.715800 & 0.613100 & 0.840900 & 0.633900 & 0.613300 & 0.609900 & 0.610300 & 45 & NaN \\
+Geometry Transformer & Landmarks & 1200 & 1.960000 & 0.683900 & 0.581000 & 0.811700 & 0.603600 & 0.580800 & 0.576000 & 0.576500 & 46 & NaN \\
+\bottomrule
+\end{tabular}
+\end{table}

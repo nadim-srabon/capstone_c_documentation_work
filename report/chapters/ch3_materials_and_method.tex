@@ -1,0 +1,120 @@
+% =====================================================================
+%  Chapter 3 -- Materials and Method
+%  Status: SKELETON (headings only)  --  see status.md
+%  Sources: Capstone B report Ch. 4-6; master_report_metadata/
+%           (tables/table03, table04; A_generated_figures/02_methodology,
+%           03_training_curves); notebooks/*; documents/project_README.md
+% =====================================================================
+\chapter{Materials and Method}
+\label{ch:method}
+
+\todo{Chapter introduction.}
+
+% =====================================================================
+\section{Materials}
+\label{sec:materials}
+
+\subsection{Dataset Acquisition}
+\label{sec:dataset-acquisition}
+% ASL Citizen download + licence (Microsoft Research License Terms,
+% no redistribution); why WLASL was abandoned (median 6 videos/class).
+\todo{Write.}
+
+\subsection{Dataset Preprocessing}
+\label{sec:preprocessing}
+% Manifest from official train/val/test CSVs; 63,550 cached videos /
+% 2,731 glosses; 3 cache shards on Kaggle; top-K selection; class-list
+% fingerprint 72d3ef78291c shared by all 1000-class models; 16 frames.
+\todo{Write.}
+
+\subsection{Feature Extraction}
+\label{sec:feature-extraction}
+% MediaPipe Tasks (Hand/Pose/Face landmarkers, VIDEO mode); 58 points x
+% (x,y) = 116 features; shoulder-centre / shoulder-width normalisation
+% (Eq.); velocity; 112x112 signer crop with 25% margin; x-position hand
+% assignment; detected-frame sampling history (38.1% -> 30.7%).
+% Figure: B_original_notebook_figures/... hand landmark schematic.
+\todo{Write.}
+
+% =====================================================================
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Why Transformer Models instead of RNN or Encoder--Decoder}
+\label{sec:why-transformer}
+\todo{Write.}
+
+\subsection{Proposed Models}
+\label{sec:proposed-models}
+% Development path: Capstone B iterations (summarise the B report Ch. 5
+% by WHAT changed and WHY, never by version number) and the post-B
+% redesign: geometry-only ablation, ST-GCN, Video Swin-T.
+% Do NOT write internal labels such as "v9", "v10" or notebook names.
+\todo{Write.}
+
+\subsection{Model Architectures}
+\label{sec:architectures}
+% Figure: A_generated_figures/02_methodology/fig02_02_architecture_overview
+% Four architectures: R3D-18 Dual-Stream, Geometry Transformer, ST-GCN,
+% Video Swin-T (see metadata/project_metadata.json "models").
+\todo{Write.}
+
+\subsection{Algorithm / Model Formulation: Attention Models}
+\label{sec:attention}
+\todo{Write (scaled dot-product attention, multi-head attention,
+positional encoding, shifted-window attention, graph convolution).}
+
+\subsection{Transformers}
+\label{sec:transformers}
+\todo{Write.}
+
+\subsection{Proposed Model Design / Framework}
+\label{sec:framework}
+% Figure: A_generated_figures/02_methodology/fig02_01_recognition_pipeline
+% (already used in Ch.1? -> NO, Ch.1 uses the app screenshot; use it here)
+\todo{Write.}
+
+\subsection{Experimental Setup}
+\label{sec:experimental-setup}
+\todo{Write.}
+
+\subsection{Evaluation Metrics}
+\label{sec:metrics}
+% top-1, top-5, macro precision/recall/F1, weighted F1, CPU latency.
+\todo{Write.}
+
+\subsection{Hardware, Design Tools, and Development Environment}
+\label{sec:hardware}
+% Kaggle T4 GPUs (Swin: 2x T4, 6.1 h); local Windows 11 CPU; Python
+% 3.13.5, torch 2.15.0+cpu, mediapipe 0.10.35, streamlit 1.67.0 ...
+\todo{Write.}
+
+\subsection{Dataloader, Optimizer, and Loss Function}
+\label{sec:optim}
+\todo{Write.}
+
+\subsection{Model Parameters}
+\label{sec:model-params}
+% tables/table03_training_hyperparameters.tex
+\todo{Write.}
+
+\subsection{Computation of Parameters}
+\label{sec:param-computation}
+\todo{Write.}
+
+% =====================================================================
+\section{Designing and Building the Web Application}
+\label{sec:webapp-design}
+% Streamlit pages: Home, Recognize, Results, Methodology, About.
+% Screenshots: C_app_screenshots/app01..app12.
+\todo{Write.}
+
+\section{Integrating the Models with the Web Application}
+\label{sec:webapp-integration}
+% video_processor.py (port of the cache builder), model_loader.py
+% (strict load, HF download, one model in memory), predictor.py.
+\todo{Write.}
+
+\section{Summary}
+\label{sec:method-summary}
+\todo{Write.}

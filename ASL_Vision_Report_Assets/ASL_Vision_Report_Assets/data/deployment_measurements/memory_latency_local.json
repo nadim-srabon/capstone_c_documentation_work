@@ -1,0 +1,49 @@
+{
+ "baseline_mb": 219,
+ "with_mediapipe_mb": 453,
+ "feature_extraction_s": 1.1,
+ "models": {
+  "swin3d_t_1000": {
+   "load_s": 4.0,
+   "infer_ms_2threads": 2551,
+   "rss_after_load_mb": 810,
+   "rss_peak_mb": 827
+  },
+  "r3d18_dualstream_1000": {
+   "load_s": 0.61,
+   "infer_ms_2threads": 710,
+   "rss_after_load_mb": 842,
+   "rss_peak_mb": 755
+  },
+  "geometry_transformer_1000": {
+   "load_s": 0.04,
+   "infer_ms_2threads": 3,
+   "rss_after_load_mb": 747,
+   "rss_peak_mb": 747
+  },
+  "stgcn_1000": {
+   "load_s": 0.04,
+   "infer_ms_2threads": 11,
+   "rss_after_load_mb": 720,
+   "rss_peak_mb": 722
+  },
+  "geometry_transformer_300": {
+   "load_s": 0.03,
+   "infer_ms_2threads": 2,
+   "rss_after_load_mb": 729,
+   "rss_peak_mb": 729
+  },
+  "geometry_transformer_500": {
+   "load_s": 0.03,
+   "infer_ms_2threads": 4,
+   "rss_after_load_mb": 729,
+   "rss_peak_mb": 729
+  },
+  "geometry_transformer_1200": {
+   "load_s": 0.05,
+   "infer_ms_2threads": 3,
+   "rss_after_load_mb": 729,
+   "rss_peak_mb": 729
+  }
+ }
+}

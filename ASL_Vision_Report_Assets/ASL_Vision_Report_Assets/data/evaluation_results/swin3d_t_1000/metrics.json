@@ -1,0 +1,33 @@
+{
+ "model_id": "swin3d_t_1000",
+ "num_classes": 1000,
+ "class_fingerprint": "72d3ef78291c",
+ "best_epoch": 25,
+ "epochs_ran": 25,
+ "val_top1_best": 0.7464266807834833,
+ "test": {
+  "top1": 0.6677547770700637,
+  "top5": 0.8888535031847133,
+  "macro_precision": 0.6943144149933611,
+  "macro_recall": 0.6693467865467866,
+  "macro_f1": 0.6650779720843395,
+  "weighted_precision": 0.6957885463315102,
+  "weighted_recall": 0.6677547770700637,
+  "weighted_f1": 0.6649032467996376,
+  "n_samples": 12560
+ },
+ "trainable_params": 28619470,
+ "train_hours": 6.1,
+ "gpu": [
+  "Tesla T4",
+  "Tesla T4"
+ ],
+ "gpu_test_seconds_total": 288.0,
+ "cpu_latency": {
+  "cpu_threads": 2,
+  "mean_s": 1.2200342656667165,
+  "runs": 3
+ },
+ "smoke_test": false,
+ "total_params": 28619470
+}

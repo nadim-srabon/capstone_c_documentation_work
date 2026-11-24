@@ -1,0 +1,109 @@
+{
+ "thesis_title": "Building a Word-Level American Sign Language Recognition System: A Multi-Architecture Design and Evaluation Study",
+ "short_name": "ASL Vision",
+ "task": "Word-level (isolated sign) American Sign Language recognition from video",
+ "institution": {
+  "university": "East West University",
+  "department": "Department of Computer Science and Engineering",
+  "location": "Dhaka, Bangladesh"
+ },
+ "team": [
+  "Nadim Srabon",
+  "Pranay Saha",
+  "Redoanul Alam Mozumder",
+  "Aniruddha Manab Deb"
+ ],
+ "supervisor": "Dr. Anup Kumar Paul",
+ "repository": "https://github.com/nadim-srabon/asl-vision",
+ "model_weights": "https://huggingface.co/srabon12/asl-vision-models (private)",
+ "dataset": {
+  "name": "ASL Citizen",
+  "publisher": "Microsoft Research",
+  "license": "Microsoft Research License Terms -- non-commercial research use; data may not be redistributed.",
+  "split_policy": "Official signer-independent train / validation / test splits",
+  "cached_videos": 63550,
+  "glosses_in_cache": 2731,
+  "frames_per_clip": 16,
+  "subset_1000": {
+   "videos": 30909,
+   "train": 14571,
+   "val": 3778,
+   "test": 12560,
+   "videos_per_class_min": 30,
+   "videos_per_class_max": 32
+  },
+  "typical_video": {
+   "fps_median": 30.0,
+   "frames_median": 73,
+   "resolution": "640x480"
+  },
+  "sources": {
+   "cached_videos, glosses_in_cache": "r3d_18 notebook manifest cell output (63,550 entries, 2,731 classes)",
+   "subset_1000": "r3d_18 notebook PILOT_MODE cell output; identical split sizes in all 1000-class runs (test n=12,560)",
+   "typical_video": "r3d_18 notebook probe_video() over 300 random clips"
+  }
+ },
+ "models": {
+  "swin3d_t_1000": {
+   "display_name": "Video Swin-T",
+   "family": "RGB video",
+   "classes": 1000,
+   "origin": "Capstone C -- train_1000_swin3d_t.ipynb",
+   "description": "Video Swin Transformer (tiny), Kinetics-400 initialised, fine-tuned end-to-end on 16-frame signer crops resized to 224x224. Shifted-window self-attention over space and time."
+  },
+  "r3d18_dualstream_1000": {
+   "display_name": "R3D-18 Dual-Stream",
+   "family": "RGB + landmarks",
+   "classes": 1000,
+   "origin": "Capstone B -- r3d_18 dual-stream notebook (v9)",
+   "description": "Capstone B (v9) model: Kinetics-400 R3D-18 3D-CNN on 112x112 signer crops (layer4 fine-tuned) fused with a MediaPipe landmark stream, followed by a 3-layer Transformer encoder."
+  },
+  "geometry_transformer_1000": {
+   "display_name": "Geometry Transformer",
+   "family": "Landmarks",
+   "classes": 1000,
+   "origin": "Capstone C -- train_1000_landmark_models.ipynb",
+   "description": "v10 geometry-only model: 58 MediaPipe landmarks (hands, arms, eyebrows) + velocity per frame, linear embedding, sinusoidal positions, 3-layer Transformer encoder, mean pooling."
+  },
+  "stgcn_1000": {
+   "display_name": "ST-GCN",
+   "family": "Landmarks",
+   "classes": 1000,
+   "origin": "Capstone C -- train_1000_landmark_models.ipynb",
+   "description": "Spatial-temporal graph convolutional network over the 58-landmark skeleton (hand bones, arm chain, eyebrows) plus a learned adjacency; 7 graph/temporal-conv blocks."
+  },
+  "geometry_transformer_300": {
+   "display_name": "Geometry Transformer",
+   "family": "Landmarks",
+   "classes": 300,
+   "origin": "Capstone C -- asl-300-class-single-stream-model-pilot-run",
+   "description": "v10 geometry-only Transformer trained on the 300 most frequent glosses."
+  },
+  "geometry_transformer_500": {
+   "display_name": "Geometry Transformer",
+   "family": "Landmarks",
+   "classes": 500,
+   "origin": "Capstone C -- asl-500-class-single-stream-model-pilot-run",
+   "description": "v10 geometry-only Transformer trained on the 500 most frequent glosses."
+  },
+  "geometry_transformer_1200": {
+   "display_name": "Geometry Transformer",
+   "family": "Landmarks",
+   "classes": 1200,
+   "origin": "Capstone C -- asl-1200-class-single-stream-model-pilot-run",
+   "description": "v10 geometry-only Transformer trained on the 1200 most frequent glosses."
+  }
+ },
+ "training_hardware": "Kaggle notebooks, NVIDIA Tesla T4 GPUs (Swin-T: 2x T4, 6.1 h)",
+ "app_environment": {
+  "python": "3.13.5",
+  "torch": "2.15.0+cpu",
+  "torchvision": "0.29.2+cpu",
+  "mediapipe": "0.10.35",
+  "streamlit": "1.67.0",
+  "plotly": "7.1.0",
+  "numpy": "2.5.4",
+  "pandas": "3.1.1"
+ },
+ "deployment": "Streamlit Community Cloud (CPU), weights downloaded on demand from Hugging Face"
+}

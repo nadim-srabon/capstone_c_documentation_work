@@ -1,0 +1,2 @@
+1. live app link- https://aslr-system.streamlit.app/
+2. github repo of the behind the live app - https://github.com/nadim-srabon/asl-vision

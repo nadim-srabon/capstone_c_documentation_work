@@ -1,0 +1,20 @@
+{
+ "model_id": "geometry_transformer_300",
+ "num_classes": 300,
+ "class_fingerprint": "be24a94fc983",
+ "best_epoch": 39,
+ "val_top1_best": 0.7401851852734883,
+ "test": {
+  "top1": 0.6319218241042345,
+  "top5": 0.8496617389125533,
+  "macro_precision": 0.6574976971146341,
+  "macro_recall": 0.6324812409812409,
+  "macro_f1": 0.629817912554733,
+  "weighted_precision": 0.6583194895696206,
+  "weighted_recall": 0.6319218241042345,
+  "weighted_f1": 0.6298552315083797
+ },
+ "trainable_params": 1721516,
+ "source": "v10_geometry_only_300cls_vs_v9_comparison.csv + precision_recall_f1_summary.csv",
+ "total_params": 1725612
+}

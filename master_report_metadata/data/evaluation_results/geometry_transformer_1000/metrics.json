@@ -1,0 +1,30 @@
+{
+ "model_id": "geometry_transformer_v10_1000",
+ "num_classes": 1000,
+ "class_fingerprint": "72d3ef78291c",
+ "best_epoch": 47,
+ "epochs_ran": 50,
+ "val_top1_best": 0.6752249867654844,
+ "test": {
+  "top1": 0.5746815286624204,
+  "top5": 0.8181528662420382,
+  "macro_precision": 0.598214841751171,
+  "macro_recall": 0.5743487012987013,
+  "macro_f1": 0.5709831831403482,
+  "weighted_precision": 0.5990948028689598,
+  "weighted_recall": 0.5746815286624204,
+  "weighted_f1": 0.5716082846723508,
+  "n_samples": 12560
+ },
+ "trainable_params": 1901416,
+ "train_minutes": 15.0,
+ "gpu": "Tesla T4",
+ "gpu_test_seconds_total": 0.37,
+ "cpu_latency": {
+  "cpu_threads": 2,
+  "mean_s": 0.003151696099985202,
+  "runs": 10
+ },
+ "smoke_test": false,
+ "total_params": 1905512
+}

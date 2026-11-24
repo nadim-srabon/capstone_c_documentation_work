@@ -1,0 +1,16 @@
+{
+  "name": "ASL Citizen",
+  "publisher": "Microsoft Research",
+  "license": "Microsoft Research License Terms -- non-commercial research use; data may not be redistributed.",
+  "split_policy": "Official signer-independent train / validation / test splits",
+  "cached_videos": 63550,
+  "glosses_in_cache": 2731,
+  "frames_per_clip": 16,
+  "subset_1000": {"videos": 30909, "train": 14571, "val": 3778, "test": 12560, "videos_per_class_min": 30, "videos_per_class_max": 32},
+  "typical_video": {"fps_median": 30.0, "frames_median": 73, "resolution": "640x480"},
+  "sources": {
+    "cached_videos, glosses_in_cache": "r3d_18 notebook manifest cell output (63,550 entries, 2,731 classes)",
+    "subset_1000": "r3d_18 notebook PILOT_MODE cell output; identical split sizes in all 1000-class runs (test n=12,560)",
+    "typical_video": "r3d_18 notebook probe_video() over 300 random clips"
+  }
+}

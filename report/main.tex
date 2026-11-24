@@ -1,0 +1,77 @@
+% =====================================================================
+%  main.tex -- Capstone (400 A/B/C) final report ("black book")
+%
+%  Building a Word-Level American Sign Language Recognition System:
+%  A Multi-Architecture Design and Evaluation Study
+%
+%  Build:  latexmk -pdf main.tex      (pdfLaTeX + BibTeX)
+%  Rules:  read formatting_instructions.md before editing any chapter.
+% =====================================================================
+\documentclass[12pt,a4paper,oneside]{report}
+
+% ---- switches ------------------------------------------------------
+\newif\ifprintversion
+\printversionfalse      % true  -> black links, for the printed copy
+\newif\iffinal
+\finalfalse             % true  -> hide all \todo{} / \verify{} marks
+
+\input{setup/preamble}
+\input{setup/macros}
+
+\begin{document}
+
+% =====================================================================
+%  FRONT MATTER  (roman page numbers)
+% =====================================================================
+\pagenumbering{roman}
+\input{frontmatter/titlepage}
+\input{frontmatter/declaration}
+\input{frontmatter/approval}
+\input{frontmatter/acknowledgement}
+\input{frontmatter/abstract}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Table of Contents}
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+\input{frontmatter/abbreviations}
+
+% =====================================================================
+%  MAIN MATTER  (arabic page numbers)
+% =====================================================================
+\cleardoublepage
+\pagenumbering{arabic}
+
+\input{chapters/ch1_introduction}
+\input{chapters/ch2_related_works}
+\input{chapters/ch3_materials_and_method}
+\input{chapters/ch4_data_description}
+\input{chapters/ch5_results_and_discussion}
+\input{chapters/ch6_conclusion}
+
+% =====================================================================
+%  BACK MATTER
+% =====================================================================
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\appendix
+\input{backmatter/appendix_a}
+\input{backmatter/co_po_mapping}
+
+\end{document}

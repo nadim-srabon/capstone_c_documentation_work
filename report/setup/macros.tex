@@ -1,0 +1,55 @@
+% =====================================================================
+%  macros.tex  --  Project-wide names, numbers and helper commands
+%  Use these macros instead of typing names by hand, so the spelling
+%  is identical in every chapter.  See formatting_instructions.md.
+% =====================================================================
+
+% ---------------------------------------------------------------------
+% Thesis metadata
+% ---------------------------------------------------------------------
+\newcommand{\ThesisTitle}{Building a Word-Level American Sign Language Recognition System}
+\newcommand{\ThesisSubtitle}{A Multi-Architecture Design and Evaluation Study}
+\newcommand{\ThesisShortTitle}{Word-Level ASL Recognition}
+\newcommand{\ProjectName}{ASL Vision}
+\newcommand{\University}{East West University}
+\newcommand{\Department}{Department of Computer Science and Engineering}
+\newcommand{\Degree}{Bachelor of Science in Computer Science and Engineering}
+\newcommand{\Supervisor}{Dr.\ Anup Kumar Paul}
+\newcommand{\SupervisorTitle}{Associate Professor}
+\newcommand{\SubmissionDate}{December 2026}   % <-- update before printing
+\newcommand{\AppURL}{\url{https://aslr-system.streamlit.app/}}
+\newcommand{\RepoURL}{\url{https://github.com/nadim-srabon/asl-vision}}
+
+% ---------------------------------------------------------------------
+% Model and dataset names (always use these)
+% ---------------------------------------------------------------------
+\newcommand{\aslc}{ASL Citizen}
+\newcommand{\wlasl}{WLASL}
+\newcommand{\swin}{Video Swin-T}
+\newcommand{\geotr}{Geometry Transformer}
+\newcommand{\stgcn}{ST-GCN}
+\newcommand{\rthreed}{R3D-18 Dual-Stream}
+\newcommand{\mediapipe}{MediaPipe}
+
+% Capstone phase names
+\newcommand{\capA}{Capstone~A}
+\newcommand{\capB}{Capstone~B}
+\newcommand{\capC}{Capstone~C}
+
+% ---------------------------------------------------------------------
+% Text helpers
+% ---------------------------------------------------------------------
+\newcommand{\gloss}[1]{\textsc{\MakeLowercase{#1}}}  % sign gloss, e.g. \gloss{DONUT}
+\newcommand{\code}[1]{\texttt{#1}}                    % file / function names
+\newcommand{\etal}{\textit{et~al.}}
+\newcommand{\ie}{i.e.,\ }
+\newcommand{\eg}{e.g.,\ }
+\newcommand{\topone}{top-1}
+\newcommand{\topfive}{top-5}
+\newcommand{\pct}[1]{\SI{#1}{\percent}}               % \pct{66.8} -> 66.8 %
+
+% ---------------------------------------------------------------------
+% Draft notes.  Shown in red while \finalfalse; vanish when \finaltrue.
+% ---------------------------------------------------------------------
+\newcommand{\todo}[1]{\iffinal\else{\color{red}\textbf{[TODO:} #1\textbf{]}}\fi}
+\newcommand{\verify}[1]{\iffinal#1\else{\color{orange!80!black}#1\textsuperscript{\,[verify]}}\fi}
